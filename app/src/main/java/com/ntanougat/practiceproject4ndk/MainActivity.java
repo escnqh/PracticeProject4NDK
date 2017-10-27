@@ -18,17 +18,17 @@ public class MainActivity extends Activity implements View.OnClickListener{
     // Used to load the 'native-lib' library on application startup.
     static {
         System.loadLibrary("native-lib");
-//        System.loadLibrary("Test4CPP");
+//        System.loadLibrary("Test4CPP");  //只添加需要使用的SHARE库不然不能识别
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        result_tv = (TextView) findViewById(R.id.result_tv);
-        fnum= (EditText) findViewById(R.id.firstNum);
-        snum= (EditText) findViewById(R.id.secNum);
-        add_btn= (Button) findViewById(R.id.add_btn);
+        result_tv = findViewById(R.id.result_tv);
+        fnum= findViewById(R.id.firstNum);
+        snum= findViewById(R.id.secNum);
+        add_btn= findViewById(R.id.add_btn);
         add_btn.setOnClickListener(this);
 
     }
